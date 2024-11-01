@@ -79,7 +79,7 @@ mean_table
 mean_table_categories
 
 mean_all_variables <- diamonds %>%
-  summarise(across(where(is.numeric)), mean, .names = "avg_{.cols}")
+  summarise(across(where(is.numeric), mean, .names = "avg_{.col}"))
 mean_all_variables
 # table_mm arithmetic mean within each clarity category
 
